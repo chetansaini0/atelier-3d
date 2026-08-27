@@ -15,9 +15,10 @@ export async function convertDwgToDxf(bytes: Uint8Array, filename: string): Prom
     };
   }
 
-  const dir = await mkdtemp(join(tmpdir(), "atelier-cad-"));
-  const input = join(dir, filename.replace(/[^\w.-]/g, "_") || "input.dwg");
-  const output = join(dir, "out.dxf");
+  const dir = await mkdtemp(join(/* turbopackIgnore: true */ tmpdir(), "atelier-cad-"));
+  const safeName = filename.replace(/[^\w.-]/g, "_") || "input.dwg";
+  const input = join(/* turbopackIgnore: true */ dir, safeName);
+  const output = join(/* turbopackIgnore: true */ dir, "out.dxf");
   try {
     await writeFile(input, bytes);
     await runConverter(cmd, input, output);
