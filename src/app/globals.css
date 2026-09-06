@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0c0d0b;
-  --bg-soft: #141511;
-  --fg: #f4f0e6;
-  --muted: #9a9486;
-  --line: rgba(214, 201, 176, 0.16);
-  --brass: #c4a574;
-  --brass-dim: #8d7349;
+  --bg: #0a0b09;
+  --bg-soft: #12130f;
+  --fg: #f2eee4;
+  --muted: #958f82;
+  --line: rgba(214, 201, 176, 0.14);
+  --brass: #c9a86c;
+  --brass-dim: #8a7044;
   --danger: #c45c4a;
-  --glass: rgba(20, 21, 17, 0.72);
+  --glass: rgba(18, 19, 15, 0.78);
 }
 
 .theme-light {
-  --bg: #f3eee4;
-  --bg-soft: #fffaf1;
-  --fg: #1a1916;
-  --muted: #6b655a;
-  --line: rgba(26, 25, 22, 0.12);
-  --brass: #8b6914;
-  --brass-dim: #6c5412;
-  --glass: rgba(255, 250, 241, 0.78);
+  --bg: #f1ebe0;
+  --bg-soft: #faf6ee;
+  --fg: #161511;
+  --muted: #6a6458;
+  --line: rgba(22, 21, 17, 0.12);
+  --brass: #8a6a16;
+  --brass-dim: #6a5212;
+  --glass: rgba(250, 246, 238, 0.82);
 }
 
 html,
@@ -29,6 +29,8 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -36,7 +38,8 @@ body {
 }
 
 .font-serif {
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 400;
 }
 
 .glass {
@@ -46,11 +49,12 @@ body {
 }
 
 .panel-shadow {
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.32);
 }
 
 ::selection {
-  background: rgba(196, 165, 116, 0.35);
+  background: rgba(201, 168, 108, 0.38);
+  color: var(--fg);
 }
 
 button,
