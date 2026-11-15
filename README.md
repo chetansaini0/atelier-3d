@@ -1,5 +1,7 @@
 # Atelier
 
+**Live:** https://atelier-3d-nine.vercel.app
+
 Turn floor plans, CAD drawings, and interior references into a walkable 3D environment.
 
 Upload a **DWG / DXF** (or photos) and Atelier reconstructs walls, rooms, doors, and furniture as real Three.js geometry — not a drawing on a plane. Walk it in first person with collision, inspect objects, measure spaces, and export.
